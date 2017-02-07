@@ -10,5 +10,6 @@
   "node": true,
   "sub": true,
   "undef": true,
+  "laxbreak": true,
   "unused": true
 }

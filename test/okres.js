@@ -17,15 +17,19 @@ describe('okres en', function () {
 });
 
 describe('okres pl', function () {
+  before(function() {
+    this.okres = okres('pl');
+  });
+
   it('should format durations', function () {
-    okres({ hour: 10, minute: 5 }, 'pl').should.be.eql('10 godzin 5 minut');
+    this.okres({ hour: 10, minute: 5 }).should.be.eql('10 godzin 5 minut');
   });
 
   it('should skip zeros by default', function () {
-    okres({ day: 1, hour: 0, minute: 5 }, 'pl').should.be.eql('1 dzień 5 minut');
+    this.okres({ day: 1, hour: 0, minute: 5 }).should.be.eql('1 dzień 5 minut');
   });
 
   it('should show zeros when required', function () {
-    okres({ day: 1, hour: 0, minute: 5 }, 'pl', { showZero: true }).should.be.eql('1 dzień 0 godzin 5 minut');
+    this.okres({ day: 1, hour: 0, minute: 5 }, { showZero: true }).should.be.eql('1 dzień 0 godzin 5 minut');
   });
 });

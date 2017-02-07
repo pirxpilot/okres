@@ -1,0 +1,32 @@
+{
+  "name": "okres",
+  "version": "0.0.0",
+  "description": "Localized formating for durations.",
+  "author": {
+    "name": "Damian Krzeminski",
+    "email": "pirxpilot@code42day.com",
+    "url": "https://code42day.com"
+  },
+  "repository": "code42day/okres",
+  "license": "MIT",
+  "keywords": [
+    "okres",
+    "duration",
+    "date",
+    "i18n",
+    "l10n"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0",
+    "should": "^11.2.0"
+  },
+  "scripts": {
+    "test": "make check"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
+}

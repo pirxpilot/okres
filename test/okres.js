@@ -14,6 +14,14 @@ describe('okres en', function () {
   it('should show zeros when required', function () {
     okres({ day: 1, hour: 0, minute: 5 }, { showZero: true }).should.be.eql('a day 0 hours 5 minutes');
   });
+
+  it('should format future', function () {
+    okres({ hour: 10, minute: 5 }, { future: true }).should.be.eql('in 10 hours 5 minutes');
+  });
+
+  it('should format past', function () {
+    okres({ hour: 10, minute: 5 }, { past: true }).should.be.eql('10 hours 5 minutes ago');
+  });
 });
 
 describe('okres pl', function () {
@@ -31,5 +39,13 @@ describe('okres pl', function () {
 
   it('should show zeros when required', function () {
     this.okres({ day: 1, hour: 0, minute: 5 }, { showZero: true }).should.be.eql('1 dzień 0 godzin 5 minut');
+  });
+
+  it('should format future', function () {
+    this.okres({ hour: 10, minute: 5 }, { future: true }).should.be.eql('za 10 godzin 5 minut');
+  });
+
+  it('should format past', function () {
+    this.okres({ hour: 10, minute: 5 }, { past: true }).should.be.eql('10 godzin 5 minut temu');
   });
 });

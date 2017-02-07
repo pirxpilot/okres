@@ -1,4 +1,10 @@
 
+0.2.1 / 2017-02-07
+==================
+
+ * add support for more flexible future/past formatting
+ * add more locales
+
 0.2.0 / 2017-02-07
 ==================
 

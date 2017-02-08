@@ -1,6 +1,7 @@
 var okres = require('../');
 
 require('../locale/pl');
+require('../locale/bn');
 
 describe('okres en', function () {
   it('should format durations', function () {
@@ -47,5 +48,15 @@ describe('okres pl', function () {
 
   it('should format past', function () {
     this.okres({ hour: 10, minute: 5 }, { past: true }).should.be.eql('10 godzin 5 minut temu');
+  });
+});
+
+describe('okres bn', function () {
+  before(function() {
+    this.okres = okres('bn');
+  });
+
+  it('should format durations and use postformat', function () {
+    this.okres({ hour: 10, minute: 5 }).should.be.eql('১০ ঘন্টা ৫ মিনিট');
   });
 });

@@ -1,4 +1,10 @@
 
+1.0.0 / 2017-02-07
+==================
+
+ * add support for locales with `postformat` hook
+ * add bengali and chineese locales
+
 0.2.2 / 2017-02-07
 ==================
 

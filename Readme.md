@@ -21,12 +21,13 @@ $ npm install --save okres
 ```js
 var okres = require('okres');
 
-okres({ hours: 10, minute: 5 });    // 10 hours 5 minutes
+okres({ hours: 10, minute: 5 });         // 10 hours 5 minutes
+okres({ hours: 10 }, { future: true });  // in 10 hours
 
 var okres_pl = okres('pl');
 
-okres_pl({ day: 3, minute: 0 }, { showZero: true })  // 3 dni 0 minut
-
+okres_pl({ day: 3, minute: 0 }, { showZero: true });  // 3 dni 0 minut
+okres_pl({ minute: 5 }, { past: true });              // 5 minut temu
 
 ```
 
@@ -44,13 +45,19 @@ returns formatted string representing `duration`
 - `duration` - { year, month, day, hour, minute } - if period is not specified it is skipped in
   a formatted string
 - `options.showZero` - if truthy format will include 0 amounts, otherwise zero amounts are skipped
+- `options.future` - set to make format include future indication e.g. 'in 5 hours'
+- `options.past` - set to make format include past indication e.g. '5 hours ago'
 
+## Locales
+
+`okres` locales can be created from [moment] locales by removing all parts with the exception of
+`relativeTime` and - optionally - `postformat` function.
 
 ## License
 
 MIT © [Damian Krzeminski](https://code42day.com)
 
-[moment]:
+[moment]: http://momentjs.com/
 [DateTimeFormat]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat
 
 [npm-image]: https://img.shields.io/npm/v/okres.svg

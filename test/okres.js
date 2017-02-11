@@ -49,6 +49,12 @@ describe('okres pl', function () {
   it('should format past', function () {
     this.okres({ hour: 10, minute: 5 }, { past: true }).should.be.eql('10 godzin 5 minut temu');
   });
+
+  it('should format singualar forms properly', function () {
+    this.okres({ hour: 1, minute: 5 }).should.be.eql('godzina 5 minut');
+    this.okres({ hour: 1, minute: 5 }, { future: true }).should.be.eql('za godzinę 5 minut');
+    this.okres({ hour: 1, minute: 5 }, { past: true }).should.be.eql('godzinę 5 minut temu');
+  });
 });
 
 describe('okres bn', function () {

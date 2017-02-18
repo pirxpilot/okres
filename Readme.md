@@ -55,7 +55,7 @@ returns formatted string representing `duration`
 
 ## License
 
-MIT © [Damian Krzeminski](https://code42day.com)
+MIT © [Damian Krzeminski](https://pirxpilot.me)
 
 [moment]: http://momentjs.com/
 [DateTimeFormat]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat
@@ -63,8 +63,8 @@ MIT © [Damian Krzeminski](https://code42day.com)
 [npm-image]: https://img.shields.io/npm/v/okres.svg
 [npm-url]: https://npmjs.org/package/okres
 
-[travis-url]: https://travis-ci.org/code42day/okres
-[travis-image]: https://img.shields.io/travis/code42day/okres.svg
+[travis-url]: https://travis-ci.org/pirxpilot/okres
+[travis-image]: https://img.shields.io/travis/pirxpilot/okres.svg
 
-[gemnasium-image]: https://img.shields.io/gemnasium/code42day/okres.svg
-[gemnasium-url]: https://gemnasium.com/code42day/okres
+[gemnasium-image]: https://img.shields.io/gemnasium/pirxpilot/okres.svg
+[gemnasium-url]: https://gemnasium.com/pirxpilot/okres

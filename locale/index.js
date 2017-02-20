@@ -1,0 +1,14 @@
+require('./bn');
+require('./de');
+require('./es');
+require('./fr');
+require('./it');
+require('./nl');
+require('./pl');
+require('./pt-br');
+require('./pt');
+require('./ru');
+require('./uk');
+require('./zh-cn');
+require('./zh-hk');
+require('./zh-tw');

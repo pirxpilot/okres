@@ -38,6 +38,13 @@ okres_pl({ minute: 5 }, { past: true });              // 5 minut temu
 returns a formatting function for a specified locale, if locale is not specified built-in English
 locale is used
 
+The module defining the `locale` needs to be loaded as well.
+
+```js
+require('okres/locale/pl')    // loads a single (in this case Polish) locale
+require('okres/locale');      // loads all available locales
+```
+
 ### `okres(duration, options)`
 
 returns formatted string representing `duration`

@@ -1,4 +1,9 @@
 
+1.1.0 / 2017-02-20
+==================
+
+ * add okres/locale module to allow loading all available locales
+
 1.0.3 / 2017-02-18
 ==================
 

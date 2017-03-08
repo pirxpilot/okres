@@ -1,7 +1,9 @@
+require('./ar');
 require('./bn');
 require('./de');
 require('./es');
 require('./fr');
+require('./he');
 require('./it');
 require('./nl');
 require('./pl');

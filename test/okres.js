@@ -1,7 +1,6 @@
 var okres = require('../');
 
-require('../locale/pl');
-require('../locale/bn');
+require('../locale');
 
 describe('okres en', function () {
   it('should format durations', function () {
@@ -50,7 +49,7 @@ describe('okres pl', function () {
     this.okres({ hour: 10, minute: 5 }, { past: true }).should.be.eql('10 godzin 5 minut temu');
   });
 
-  it('should format singualar forms properly', function () {
+  it('should format singular forms properly', function () {
     this.okres({ hour: 1, minute: 5 }).should.be.eql('godzina 5 minut');
     this.okres({ hour: 1, minute: 5 }, { future: true }).should.be.eql('za godzinę 5 minut');
     this.okres({ hour: 1, minute: 5 }, { past: true }).should.be.eql('godzinę 5 minut temu');
@@ -64,5 +63,15 @@ describe('okres bn', function () {
 
   it('should format durations and use postformat', function () {
     this.okres({ hour: 10, minute: 5 }).should.be.eql('১০ ঘন্টা ৫ মিনিট');
+  });
+});
+
+describe('okres ar', function () {
+  before(function() {
+    this.okres = okres('ar');
+  });
+
+  it('should format durations and use postformat', function () {
+    this.okres({ hour: 10, minute: 5 }, { future: true }).should.be.eql('بعد ١٠ ساعات ٥ دقائق');
   });
 });

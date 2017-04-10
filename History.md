@@ -1,4 +1,10 @@
 
+1.3.0 / 2017-04-10
+==================
+
+ * add Suomi (Finnish) locale
+ * add Norsk bokmål (Norwegian) locale
+
 1.2.0 / 2017-03-07
 ==================
 

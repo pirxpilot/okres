@@ -6,6 +6,7 @@ require('./es');
 require('./fi');
 require('./fr');
 require('./he');
+require('./hu');
 require('./it');
 require('./nb');
 require('./nl');

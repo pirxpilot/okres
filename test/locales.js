@@ -1,4 +1,4 @@
-var locales = require('../lib/locales');
+const locales = require('../lib/locales');
 
 require('../locale/pl');
 

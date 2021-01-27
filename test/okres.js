@@ -1,4 +1,4 @@
-var okres = require('../');
+const okres = require('../');
 
 require('../locale');
 

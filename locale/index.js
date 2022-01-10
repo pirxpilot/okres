@@ -13,6 +13,7 @@ require('./nl');
 require('./pl');
 require('./pt-br');
 require('./pt');
+require('./ro');
 require('./ru');
 require('./uk');
 require('./zh-cn');

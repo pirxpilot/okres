@@ -56,6 +56,31 @@ describe('okres pl', function () {
   });
 });
 
+
+describe('okres ro', function () {
+  before(function() {
+    this.okres = okres('ro');
+  });
+
+  it('should format durations', function () {
+    this.okres({ hour: 10, minute: 5 }).should.be.eql('10 ore 5 minute');
+  });
+
+  it('should format future', function () {
+    this.okres({ hour: 10, minute: 5 }, { future: true }).should.be.eql('peste 10 ore 5 minute');
+  });
+
+  it('should format past', function () {
+    this.okres({ hour: 10, minute: 5 }, { past: true }).should.be.eql('10 ore 5 minute în urmă');
+  });
+
+  it('should format singular forms properly', function () {
+    this.okres({ hour: 1, minute: 5 }).should.be.eql('o oră 5 minute');
+    this.okres({ hour: 1, minute: 5 }, { future: true }).should.be.eql('peste o oră 5 minute');
+    this.okres({ hour: 1, minute: 5 }, { past: true }).should.be.eql('o oră 5 minute în urmă');
+  });
+});
+
 describe('okres bn', function () {
   before(function() {
     this.okres = okres('bn');

@@ -1,6 +1,6 @@
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Dependency Status][gemnasium-image]][gemnasium-url]
+[![Build Status][build-image]][build-url]
+[![Dependency Status][deps-image]][deps-url]
 
 # okres
 
@@ -70,8 +70,8 @@ MIT © [Damian Krzeminski](https://pirxpilot.me)
 [npm-image]: https://img.shields.io/npm/v/okres.svg
 [npm-url]: https://npmjs.org/package/okres
 
-[travis-url]: https://travis-ci.org/pirxpilot/okres
-[travis-image]: https://img.shields.io/travis/pirxpilot/okres.svg
+[build-url]: https://github.com/pirxpilot/okres/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/workflow/status/pirxpilot/okres/check
 
-[gemnasium-image]: https://img.shields.io/gemnasium/pirxpilot/okres.svg
-[gemnasium-url]: https://gemnasium.com/pirxpilot/okres
+[deps-image]: https://img.shields.io/librariesio/release/npm/okres
+[deps-url]: https://libraries.io/npm/okres

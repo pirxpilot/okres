@@ -1,3 +1,4 @@
+const { describe, it } = require('node:test');
 const locales = require('../lib/locales');
 
 require('../locale/pl');

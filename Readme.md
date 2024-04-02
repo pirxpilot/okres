@@ -67,11 +67,11 @@ MIT © [Damian Krzeminski](https://pirxpilot.me)
 [moment]: http://momentjs.com/
 [DateTimeFormat]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat
 
-[npm-image]: https://img.shields.io/npm/v/okres.svg
+[npm-image]: https://img.shields.io/npm/v/okres
 [npm-url]: https://npmjs.org/package/okres
 
 [build-url]: https://github.com/pirxpilot/okres/actions/workflows/check.yaml
-[build-image]: https://img.shields.io/github/workflow/status/pirxpilot/okres/check
+[build-image]: https://img.shields.io/github/actions/workflow/status/pirxpilot/okres/check.yaml?branch=main
 
 [deps-image]: https://img.shields.io/librariesio/release/npm/okres
 [deps-url]: https://libraries.io/npm/okres

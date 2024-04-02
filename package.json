@@ -7,7 +7,10 @@
     "email": "pirxpilot@furkot.com",
     "url": "https://pirxpilot.me"
   },
-  "repository": "pirxpilot/okres",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirxpilot/okres.git"
+  },
   "license": "MIT",
   "keywords": [
     "okres",
@@ -18,8 +21,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "jshint": "~2",
-    "mocha": "~9",
+    "@pirxpilot/jshint": "~3",
     "should": "~13"
   },
   "scripts": {

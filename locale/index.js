@@ -1,5 +1,6 @@
 require('./ar');
 require('./bn');
+require('./ca');
 require('./de');
 require('./el');
 require('./es');

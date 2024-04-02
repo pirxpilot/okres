@@ -19,7 +19,6 @@
   "dependencies": {},
   "devDependencies": {
     "@pirxpilot/jshint": "~3",
-    "mocha": "~9",
     "should": "~13"
   },
   "scripts": {

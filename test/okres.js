@@ -111,6 +111,33 @@ describe('okres catalan', function () {
   });
 });
 
+describe('okres danish', function () {
+  let _okres;
+
+  before(function() {
+    _okres = okres('da');
+  });
+
+  it('should format durations', function () {
+    _okres({ hour: 10, minute: 5 }).should.be.eql('10 timer 5 minutter');
+  });
+
+  it('should format future', function () {
+    _okres({ hour: 10, minute: 5 }, { future: true }).should.be.eql('om 10 timer 5 minutter');
+  });
+
+  it('should format past', function () {
+    _okres({ hour: 10, minute: 5 }, { past: true }).should.be.eql('10 timer 5 minutter siden');
+  });
+
+  it('should format singular forms properly', function () {
+    _okres({ hour: 1, minute: 5 }).should.be.eql('en time 5 minutter');
+    _okres({ hour: 1, minute: 5 }, { future: true }).should.be.eql('om en time 5 minutter');
+    _okres({ hour: 1, minute: 5 }, { past: true }).should.be.eql('en time 5 minutter siden');
+  });
+});
+
+
 describe('okres bn', function () {
   let _okres;
 

@@ -2,11 +2,9 @@
 //! locale : Danish [da]
 //! author : Ulrik Nielsen : https://github.com/mrbase
 
-;(function (factory) {
-    factory(this._okresLocales);
- }(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
-var da = moment.defineLocale('da', {
+var da = defineLocale('da', {
     relativeTime: {
         future: 'om %s',
         past: '%s siden',
@@ -27,4 +25,4 @@ var da = moment.defineLocale('da', {
 
 return da;
 
-}));
+})(globalThis._okresLocales);

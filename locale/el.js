@@ -2,11 +2,9 @@
 //! locale : Greek [el]
 //! author : Aggelos Karalias : https://github.com/mehiel
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
-var el = moment.defineLocale('el', {
+var el = defineLocale('el', {
     relativeTime : {
         future : 'σε %s',
         past : '%s πριν',
@@ -26,4 +24,4 @@ var el = moment.defineLocale('el', {
 
 return el;
 
-}));
+})(globalThis._okresLocales);

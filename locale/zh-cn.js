@@ -3,12 +3,10 @@
 //! author : suupic : https://github.com/suupic
 //! author : Zeno Zeng : https://github.com/zenozeng
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
-var zhCn = moment.defineLocale('zh-cn', {
+var zhCn = defineLocale('zh-cn', {
     relativeTime : {
         future : '%s内',
         past : '%s前',
@@ -28,4 +26,4 @@ var zhCn = moment.defineLocale('zh-cn', {
 
 return zhCn;
 
-}));
+})(globalThis._okresLocales);

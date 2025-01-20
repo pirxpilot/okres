@@ -2,12 +2,10 @@
 //! locale : Portuguese [pt]
 //! author : Jefferson : https://github.com/jalex79
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
-var pt = moment.defineLocale('pt', {
+var pt = defineLocale('pt', {
     relativeTime : {
         future : 'em %s',
         past : 'há %s',
@@ -27,4 +25,4 @@ var pt = moment.defineLocale('pt', {
 
 return pt;
 
-}));
+})(globalThis._okresLocales);

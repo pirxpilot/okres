@@ -3,12 +3,10 @@
 //! authors : Espen Hovlandsdal : https://github.com/rexxars
 //!           Sigurd Gartmann : https://github.com/sigurdga
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
-var nb = moment.defineLocale('nb', {
+var nb = defineLocale('nb', {
     relativeTime : {
         future : 'om %s',
         past : '%s siden',
@@ -28,4 +26,4 @@ var nb = moment.defineLocale('nb', {
 
 return nb;
 
-}));
+})(globalThis._okresLocales);

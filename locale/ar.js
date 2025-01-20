@@ -4,9 +4,7 @@
 //! author : Ahmed Elkhatib
 //! author : forabi https://github.com/forabi
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
 var symbolMap = {
@@ -43,7 +41,7 @@ var pluralize = function (u) {
     };
 };
 
-var ar = moment.defineLocale('ar', {
+var ar = defineLocale('ar', {
     relativeTime : {
         future : 'بعد %s',
         past : 'منذ %s',
@@ -68,4 +66,4 @@ var ar = moment.defineLocale('ar', {
 
 return ar;
 
-}));
+})(globalThis._okresLocales);

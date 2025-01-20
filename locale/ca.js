@@ -2,11 +2,9 @@
 //! locale : Catalan [ca]
 //! author : Juan G. Hurtado : https://github.com/juanghurtado
 
-;(function (factory) {
-  factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
-var ca = moment.defineLocale('ca', {
+var ca = defineLocale('ca', {
     relativeTime : {
         future : "d'aquí %s",
         past : 'fa %s',
@@ -27,4 +25,4 @@ var ca = moment.defineLocale('ca', {
 
 return ca;
 
-}));
+})(globalThis._okresLocales);

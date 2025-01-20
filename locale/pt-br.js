@@ -2,12 +2,10 @@
 //! locale : Portuguese (Brazil) [pt-br]
 //! author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
-var ptBr = moment.defineLocale('pt-br', {
+var ptBr = defineLocale('pt-br', {
     relativeTime : {
         future : 'em %s',
         past : '%s atrás',
@@ -27,4 +25,4 @@ var ptBr = moment.defineLocale('pt-br', {
 
 return ptBr;
 
-}));
+})(globalThis._okresLocales);

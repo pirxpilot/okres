@@ -3,10 +3,7 @@
 //! author : Adam Brunner : https://github.com/adambrunner
 //! author : Peter Viszt  : https://github.com/passatgt
 
-; (function (factory) {
-  factory(this._okresLocales);
-}(function (moment) {
-  'use strict';
+(function ({ defineLocale }) {
 
 function translate(number, withoutSuffix, key, isFuture) {
     var num = number;
@@ -43,7 +40,7 @@ function translate(number, withoutSuffix, key, isFuture) {
     return '';
 }
 
-var el = moment.defineLocale('hu', {
+var el = defineLocale('hu', {
     relativeTime: {
         future: '%s múlva',
         past: '%s',
@@ -64,5 +61,5 @@ var el = moment.defineLocale('hu', {
 
 return el;
 
-}));
+})(globalThis._okresLocales);
 

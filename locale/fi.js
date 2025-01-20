@@ -2,9 +2,7 @@
 //! locale : Finnish [fi]
 //! author : Tarmo Aidantausta : https://github.com/bleadof
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
 var numbersPast = 'nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän'.split(' ');
@@ -50,7 +48,7 @@ function verbalNumber(number, isFuture) {
     return number < 10 ? (isFuture ? numbersFuture[number] : numbersPast[number]) : number;
 }
 
-var fi = moment.defineLocale('fi', {
+var fi = defineLocale('fi', {
     relativeTime : {
         future : '%s päästä',
         past : '%s sitten',
@@ -70,4 +68,4 @@ var fi = moment.defineLocale('fi', {
 
 return fi;
 
-}));
+})(globalThis._okresLocales);

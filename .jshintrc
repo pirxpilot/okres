@@ -11,5 +11,8 @@
   "undef": true,
   "laxbreak": true,
   "unused": true,
-  "esversion": 6
+  "esversion": 6,
+  "globals": {
+    "globalThis": false
+  }
 }

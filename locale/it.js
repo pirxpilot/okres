@@ -3,12 +3,10 @@
 //! author : Lorenzo : https://github.com/aliem
 //! author: Mattia Larentis: https://github.com/nostalgiaz
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
-var it = moment.defineLocale('it', {
+var it = defineLocale('it', {
     relativeTime : {
         future : function (s) {
             return ((/^[0-9].+$/).test(s) ? 'tra' : 'in') + ' ' + s;
@@ -30,4 +28,4 @@ var it = moment.defineLocale('it', {
 
 return it;
 
-}));
+})(globalThis._okresLocales);

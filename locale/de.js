@@ -4,9 +4,7 @@
 //! author: Menelion Elensúle: https://github.com/Oire
 //! author : Mikolaj Dadela : https://github.com/mik01aj
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
 function processRelativeTime(number, withoutSuffix, key) {
@@ -23,7 +21,7 @@ function processRelativeTime(number, withoutSuffix, key) {
     return withoutSuffix ? format[key][0] : format[key][1];
 }
 
-var de = moment.defineLocale('de', {
+var de = defineLocale('de', {
     relativeTime : {
         future : 'in %s',
         past : 'vor %s',
@@ -43,4 +41,4 @@ var de = moment.defineLocale('de', {
 
 return de;
 
-}));
+})(globalThis._okresLocales);

@@ -1,28 +1,38 @@
 const { describe, it } = require('node:test');
+const assert = require('node:assert/strict');
 const locales = require('../lib/locales');
 
 require('../locale/pl');
 
 describe('locales', function () {
   it('should select english by default', function () {
-    locales().should.have.property('relativeTime')
-      .with.property('s', 'a few seconds');
-    locales('en').should.be.exactly(locales());
+    const defaultLocale = locales();
+    assert.ok('relativeTime' in defaultLocale);
+    assert.equal(defaultLocale.relativeTime.s, 'a few seconds');
+
+    assert.equal(locales('en'), defaultLocale);
   });
 
   it('should select english for unknown', function () {
-    locales('##').should.have.property('relativeTime')
-      .with.property('s', 'a few seconds');
+    const unknownLocale = locales('##');
+    assert.ok('relativeTime' in unknownLocale);
+    assert.equal(unknownLocale.relativeTime.s, 'a few seconds');
+
+    assert.equal(locales('en'), unknownLocale);
   });
 
   it('should select locale when exact match found', function () {
-    locales('pl').should.have.property('relativeTime')
-      .with.property('s', 'kilka sekund');
+    const pl = locales('pl');
+    assert.ok('relativeTime' in pl);
+    assert.equal(pl.relativeTime.s, 'kilka sekund');
   });
 
   it('should discard coutry when not found', function () {
-    locales('pl-pl').should.have.property('relativeTime')
-      .with.property('s', 'kilka sekund');
+    const plpl = locales('pl-PL');
+    assert.ok('relativeTime' in plpl);
+    assert.equal(plpl.relativeTime.s, 'kilka sekund');
+
+    assert.equal(locales('pl'), plpl);
   });
 });
 

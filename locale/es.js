@@ -2,11 +2,9 @@
 //! locale : Spanish [es]
 //! author : Julio Napurí : https://github.com/julionc
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
-var es = moment.defineLocale('es', {
+var es = defineLocale('es', {
     relativeTime : {
         future : 'en %s',
         past : 'hace %s',
@@ -26,4 +24,4 @@ var es = moment.defineLocale('es', {
 
 return es;
 
-}));
+})(globalThis._okresLocales);

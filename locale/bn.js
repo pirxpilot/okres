@@ -2,9 +2,7 @@
 //! locale : Bengali [bn]
 //! author : Kaushik Gandhi : https://github.com/kaushikgandhi
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 var symbolMap = {
     '1': '১',
@@ -19,7 +17,7 @@ var symbolMap = {
     '0': '০'
 };
 
-var bn = moment.defineLocale('bn', {
+var bn = defineLocale('bn', {
     relativeTime : {
         future : '%s পরে',
         past : '%s আগে',
@@ -44,4 +42,4 @@ var bn = moment.defineLocale('bn', {
 
 return bn;
 
-}));
+})(globalThis._okresLocales);

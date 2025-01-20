@@ -3,9 +3,7 @@
 //! author : zemlanin : https://github.com/zemlanin
 //! Author : Menelion Elensúle : https://github.com/Oire
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
 function plural(word, num) {
@@ -31,7 +29,7 @@ function relativeTimeWithPlural(number, withoutSuffix, key) {
     }
 }
 
-var uk = moment.defineLocale('uk', {
+var uk = defineLocale('uk', {
     relativeTime : {
         future : 'за %s',
         past : '%s тому',
@@ -51,4 +49,4 @@ var uk = moment.defineLocale('uk', {
 
 return uk;
 
-}));
+})(globalThis._okresLocales);

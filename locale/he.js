@@ -4,12 +4,10 @@
 //! author : Moshe Simantov : https://github.com/DevelopmentIL
 //! author : Tal Ater : https://github.com/TalAter
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
-var he = moment.defineLocale('he', {
+var he = defineLocale('he', {
     relativeTime : {
         future : 'בעוד %s',
         past : 'לפני %s',
@@ -51,4 +49,4 @@ var he = moment.defineLocale('he', {
 
 return he;
 
-}));
+})(globalThis._okresLocales);

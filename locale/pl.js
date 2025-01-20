@@ -2,9 +2,7 @@
 //! locale : Polish [pl]
 //! author : Rafal Hirsz : https://github.com/evoL
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 function plural(n) {
     return (n % 10 < 5) && (n % 10 > 1) && ((~~(n / 10) % 10) !== 1);
@@ -28,7 +26,7 @@ function translate(number, withoutSuffix, key) {
     }
 }
 
-var pl = moment.defineLocale('pl', {
+var pl = defineLocale('pl', {
     relativeTime : {
         future : 'za %s',
         past : '%s temu',
@@ -48,4 +46,4 @@ var pl = moment.defineLocale('pl', {
 
 return pl;
 
-}));
+})(globalThis._okresLocales);

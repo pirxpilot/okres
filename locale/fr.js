@@ -2,12 +2,10 @@
 //! locale : French [fr]
 //! author : John Fischer : https://github.com/jfroffice
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
-var fr = moment.defineLocale('fr', {
+var fr = defineLocale('fr', {
     relativeTime : {
         future : 'dans %s',
         past : 'il y a %s',
@@ -27,4 +25,4 @@ var fr = moment.defineLocale('fr', {
 
 return fr;
 
-}));
+})(globalThis._okresLocales);

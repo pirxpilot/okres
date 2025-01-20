@@ -3,12 +3,10 @@
 //! author : Joris Röling : https://github.com/jorisroling
 //! author : Jacob Middag : https://github.com/middagj
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
-var nl = moment.defineLocale('nl', {
+var nl = defineLocale('nl', {
     relativeTime : {
         future : 'over %s',
         past : '%s geleden',
@@ -28,4 +26,4 @@ var nl = moment.defineLocale('nl', {
 
 return nl;
 
-}));
+})(globalThis._okresLocales);

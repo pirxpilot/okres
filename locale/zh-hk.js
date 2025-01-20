@@ -4,12 +4,10 @@
 //! author : Chris Lam : https://github.com/hehachris
 //! author : Konstantin : https://github.com/skfd
 
-;(function (factory) {
-   factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
 
-var zhHk = moment.defineLocale('zh-hk', {
+var zhHk = defineLocale('zh-hk', {
     relativeTime : {
         future : '%s內',
         past : '%s前',
@@ -29,4 +27,4 @@ var zhHk = moment.defineLocale('zh-hk', {
 
 return zhHk;
 
-}));
+})(globalThis._okresLocales);

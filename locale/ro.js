@@ -4,9 +4,7 @@
 //! author : Valentin Agachi : https://github.com/avaly
 //! author : Emanuel Cepoi : https://github.com/cepem
 
-;(function (factory) {
-  factory(this._okresLocales);
-}(function (moment) { 'use strict';
+(function ({ defineLocale }) {
 
   function relativeTimeWithPlural(number, withoutSuffix, key) {
     var format = {
@@ -25,7 +23,7 @@
     return number + separator + format[key];
   }
 
-  var ro = moment.defineLocale('ro', {
+  var ro = defineLocale('ro', {
     relativeTime: {
       future: 'peste %s',
       past: '%s în urmă',
@@ -48,4 +46,4 @@
 
   return ro;
 
-}));
+})(globalThis._okresLocales);

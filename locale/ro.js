@@ -5,25 +5,24 @@
 //! author : Emanuel Cepoi : https://github.com/cepem
 
 (function ({ defineLocale }) {
-
-  function relativeTimeWithPlural(number, withoutSuffix, key) {
-    var format = {
+  function relativeTimeWithPlural(number, _withoutSuffix, key) {
+    const format = {
       ss: 'secunde',
       mm: 'minute',
       hh: 'ore',
       dd: 'zile',
       ww: 'săptămâni',
       MM: 'luni',
-      yy: 'ani',
-    },
-      separator = ' ';
+      yy: 'ani'
+    };
+    let separator = ' ';
     if (number % 100 >= 20 || (number >= 100 && number % 100 === 0)) {
       separator = ' de ';
     }
     return number + separator + format[key];
   }
 
-  var ro = defineLocale('ro', {
+  const ro = defineLocale('ro', {
     relativeTime: {
       future: 'peste %s',
       past: '%s în urmă',
@@ -40,10 +39,9 @@
       M: 'o lună',
       MM: relativeTimeWithPlural,
       y: 'un an',
-      yy: relativeTimeWithPlural,
+      yy: relativeTimeWithPlural
     }
   });
 
   return ro;
-
 })(globalThis._okresLocales);

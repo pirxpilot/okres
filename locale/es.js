@@ -3,25 +3,23 @@
 //! author : Julio Napurí : https://github.com/julionc
 
 (function ({ defineLocale }) {
+  const es = defineLocale('es', {
+    relativeTime: {
+      future: 'en %s',
+      past: 'hace %s',
+      s: 'unos segundos',
+      m: 'un minuto',
+      mm: '%d minutos',
+      h: 'una hora',
+      hh: '%d horas',
+      d: 'un día',
+      dd: '%d días',
+      M: 'un mes',
+      MM: '%d meses',
+      y: 'un año',
+      yy: '%d años'
+    }
+  });
 
-var es = defineLocale('es', {
-    relativeTime : {
-        future : 'en %s',
-        past : 'hace %s',
-        s : 'unos segundos',
-        m : 'un minuto',
-        mm : '%d minutos',
-        h : 'una hora',
-        hh : '%d horas',
-        d : 'un día',
-        dd : '%d días',
-        M : 'un mes',
-        MM : '%d meses',
-        y : 'un año',
-        yy : '%d años'
-    },
-});
-
-return es;
-
+  return es;
 })(globalThis._okresLocales);

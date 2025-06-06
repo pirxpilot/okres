@@ -1,6 +1,6 @@
 const { describe, it, before } = require('node:test');
 const assert = require('node:assert/strict');
-const okres = require('../');
+const okres = require('../lib/okres');
 
 require('../locale');
 

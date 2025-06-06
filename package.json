@@ -19,7 +19,7 @@
     "i18n",
     "l10n"
   ],
-  "dependencies": {},
+  "exports": "./lib/okres.js",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4"
   },
@@ -27,7 +27,6 @@
     "test": "make check"
   },
   "files": [
-    "index.js",
     "lib",
     "locale"
   ]

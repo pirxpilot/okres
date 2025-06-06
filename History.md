@@ -1,4 +1,10 @@
 
+3.0.2 / 2025-06-06
+==================
+
+ * remove functionally empty `index.js`
+ * use `biome` as a linter and formatter
+
 3.0.1 / 2025-01-20
 ==================
 
